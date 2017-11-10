@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="com.mt.struts2" extends="struts-default">
+
+        <action name="hello" class="com.mt.struts2.actions.HelloAction">
+            <result name="success">/content/hello.jsp</result>
+        </action>
+
+        <action name="enter-protein" class="com.mt.struts2.actions.EnterProtein">
+            <result name="success">/content/enter-protein.jsp</result>
+            <result name="error">/content/enter-protein-error.jsp</result>
+        </action>
+
+    </package>
+</struts>
+
+<!--
+    Result Conventions
+
+    Page Name       Result Code
+
+    hello-world.jsp = success
+    hello-world-success.jsp = success
+    hello-world-error = error
+    hello-world-abc = abc
+
+    hello-world-abc.jsp -> Template Type
+         |       |
+    Resource    Result String
+-->
